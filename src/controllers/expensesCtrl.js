@@ -25,7 +25,7 @@ const expensesController = {
     const user = usersService.getById(userId);
 
     if (!user) {
-      res.status(400).json({ error: 'user not found' });
+      res.status(404).json({ error: 'user not found' });
 
       return;
     }
